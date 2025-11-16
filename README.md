@@ -1,59 +1,20 @@
-# Panduan Deployment Pelacak Pengeluaran ke GitHub Pages
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Tenang, ini panduan super simpel. Ikuti langkah-langkah ini satu per satu, jangan ada yang terlewat.
+# Run and deploy your AI Studio app
 
-### Langkah 1: Hapus File dan Folder yang Salah
+This contains everything you need to run your app locally.
 
-Setelah Anda extract file ZIP proyek ini, Anda akan melihat ada file yang sama di dua tempat. Ini yang bikin pusing. Kita akan hapus yang tidak perlu.
+View your app in AI Studio: https://ai.studio/apps/drive/1XgboGPh4AoGjE-mriWYSkwfFSOhldhkJ
 
-Buka folder proyek Anda, dan **HAPUS** file dan folder berikut dari direktori utama (folder paling luar):
+## Run Locally
 
-**Folder yang harus dihapus:**
-*   `components`
+**Prerequisites:**  Node.js
 
-**File yang harus dihapus:**
-*   `App.tsx`
-*   `index.tsx`
-*   `types.ts`
-*   `SpendingVisual.tsx` (jika ada file ini di luar folder `components`)
 
-**PENTING:** Jangan hapus folder `src`. Semua file yang kita butuhkan aman di dalam folder `src`.
-
-Setelah selesai, struktur folder utama Anda akan terlihat bersih dan benar.
-
-### Langkah 2: Edit `package.json`
-
-1.  Buka file `package.json`.
-2.  Cari baris ini: `"homepage": "https://<NAMA_PENGGUNA_GITHUB_ANDA>.github.io/gaji/",`
-3.  Ganti `<NAMA_PENGGUNA_GITHUB_ANDA>` dengan username GitHub Anda.
-    *   **Contoh:** Jika username Anda `budi-sukses`, barisnya menjadi: `"homepage": "https://budi-sukses.github.io/gaji/",`
-
-### Langkah 3: Upload Kembali ke GitHub
-
-Sekarang, upload semua file yang sudah rapi ini ke repository GitHub Anda. Pastikan semua file yang tadi dihapus sudah benar-benar tidak ada dan Anda sudah menyimpan perubahan di `package.json`.
-
-### Langkah 4: Jalankan Perintah di Komputer Anda (Terminal)
-
-Bagian ini **harus** dilakukan di komputer, tidak bisa di situs GitHub.
-
-1.  Buka aplikasi **Terminal** (atau `Command Prompt`/`Git Bash` di Windows).
-2.  Masuk ke direktori proyek Anda menggunakan perintah `cd`.
-3.  Jalankan perintah ini untuk persiapan (hanya perlu dijalankan sekali):
-    ```bash
-    npm install
-    ```
-4.  Setelah selesai, jalankan perintah ini untuk deploy:
-    ```bash
-    npm run deploy
-    ```
-
-Tunggu sampai prosesnya selesai. Perintah ini akan membuat aplikasi Anda dan mengunggahnya ke GitHub secara otomatis.
-
-### Langkah 5: Pengaturan Final di GitHub
-
-1.  Buka repository Anda di situs GitHub.
-2.  Pergi ke **Settings** > **Pages**.
-3.  Di bagian **Source**, pilih **Deploy from a branch**.
-4.  Pastikan **Branch** adalah `gh-pages` dan foldernya `/(root)`. Klik **Save**.
-
-Selesai! Tunggu beberapa menit, lalu buka link `homepage` yang Anda atur di `package.json`. Aplikasi Anda sudah online.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
