@@ -1,0 +1,5 @@
+{
+  "name": "Expense Tracker Harian",
+  "description": "A simple application to track daily expenses against a monthly salary. Users can input their salary, add expenses, and see the remaining balance. It includes features to edit and delete expense entries.",
+  "requestFramePermissions": []
+}
